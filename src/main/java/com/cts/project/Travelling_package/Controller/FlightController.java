@@ -15,23 +15,23 @@ public class FlightController {
     @Autowired
     private FlightService flightService;
 
-    @GetMapping
-    public ResponseEntity> getAllFlights() {
-        List flights = flightService.getAllFlights();
-        return ResponseEntity.ok(flights);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity getFlightById(@PathVariable Long id) {
-        Flight flight = flightService.getFlightById(id);
-        return ResponseEntity.ok(flight);
-    }
-
-    @PostMapping
-    public ResponseEntity createFlight(@RequestBody Flight flight) {
-        Flight newFlight = flightService.createFlight(flight);
-        return ResponseEntity.ok(newFlight);
-    }
+//    @GetMapping
+//    public ResponseEntity> getAllFlights() {
+//        List flights = flightService.getAllFlights();
+//        return ResponseEntity.ok(flights);
+//    }
+//
+//    @GetMapping("/{id}")
+//    public ResponseEntity getFlightById(@PathVariable Long id) {
+//        Flight flight = flightService.getFlightById(id);
+//        return ResponseEntity.ok(flight);
+//    }
+//
+//    @PostMapping
+//    public ResponseEntity createFlight(@RequestBody Flight flight) {
+//        Flight newFlight = flightService.createFlight(flight);
+//        return ResponseEntity.ok(newFlight);
+//    }
 
     @PutMapping("/{id}")
     public ResponseEntity updateFlight(@PathVariable Long id, @RequestBody Flight flightDetails) {
